@@ -1,0 +1,48 @@
+# idoit
+
+## idoit.version
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/xml
+
+{
+    "version": "2.0",
+    "method": "idoit.login",
+    "params": {
+        "apikey": "h3md6u3y",
+        "language": "en"
+    },
+    "id": 1
+}
+
+## idoit.login
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/xml
+
+
+{
+    "version": "2.0",
+    "method": "idoit.login",
+    "params": {
+        "apikey": "h3md6u3y",
+        "language": "en"
+    },
+    "id": 1
+}
+
+## idoit.logout
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/xml
+
+
+{
+    "version": "2.0",
+    "method": "idoit.logout",
+    "params": {
+        "apikey": "h3md6u3y",
+        "language": "en"
+    },
+    "id": 1
+}
