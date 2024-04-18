@@ -1,0 +1,1426 @@
+# Reading and writing different categories
+
+## General
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.read",
+    "params": {
+        "objID": 9,
+        "apikey": "c1ia5q",
+        "category": "C__CATG__GLOBAL",
+        "language": "de"
+    },
+    "id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 26,
+        "category": "C__CATG__GLOBAL",
+        "data": {
+            "tag": [
+                "Tag1"
+            ]
+        },
+        "apikey": "c1ia5q"
+    },
+    "id": 3,
+    "version": "2.0"
+}
+
+## Password
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+	"jsonrpc": "2.0",
+	"method": "cmdb.category.read",
+	"params": {
+		"objID": 1122704399,
+		"apikey": "c1ia5q",
+		"language": "en",
+		"category": "C__CATG__PASSWD"
+	},
+	"id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+	"jsonrpc": "2.0",
+	"method": "cmdb.category.save",
+	"params": {
+		"apikey": "c1ia5q",
+		"language": "en",
+		"category": "C__CATG__PASSWD",
+		"object": 1122704399,
+		"data": {
+			"title": "title",
+			"username": "username" ,
+			"password": "password",
+			"description": "description"
+		}
+	},
+	"id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+	"jsonrpc": "2.0",
+	"method": "cmdb.category.save",
+	"params": {
+		"apikey": "c1ia5q",
+		"language": "en",
+		"entry": 11026,
+		"category": "C__CATG__PASSWD",
+		"object": 1122704399,
+		"data": {
+			"title": "title",
+			"username": "username" ,
+			"password": "password",
+			"description": "description"
+		}
+	},
+	"id": 1
+}
+
+## Operating system
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+	"jsonrpc": "2.0",
+	"method": "cmdb.category.read",
+	"params": {
+		"objID": 1122546692,
+		"apikey": "c1ia5q",
+		"category": "C__CATG__OPERATING_SYSTEM"
+	},
+	"id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "id": 1,
+    "version": "2.0",
+    "method": "cmdb.object.create",
+    "params": {
+        "type": "C__OBJTYPE__SERVER",
+        "title": "CareBear Power Server with OS",
+        "categories": {
+            "C__CATG__OPERATING_SYSTEM": [
+                {
+                    "installDate": "2018-01-01 12:00:00"
+                }
+            ]
+        },
+        "apikey": "c1ia5q",
+        "language": "en"
+    }
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 31,
+        "apikey": "c1ia5q",
+        "category": "C__CATG__OPERATING_SYSTEM",
+        "entry": "",
+        "data": {
+            "application": 1,
+            "application_type": null,
+            "assigned_license": null,
+            "assigned_license_key": null,
+            "assigned_it_service": null,
+            "assigned_variant": null,
+            "assigned_version": 2,
+            "assigned_databases": null,
+            "description": "Auto created by API"
+        }
+    },
+    "id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+	"jsonrpc": "2.0",
+	"method": "cmdb.category.read",
+	"params": {
+		"objID": 27,
+		"apikey": "c1ia5q",
+		"category": "C__CATG__VERSION"
+	},
+	"id": 1
+}
+
+## Accounting
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+	"jsonrpc": "2.0",
+	"method": "cmdb.category.read",
+	"params": {
+		"objID": 1122560801,
+		"apikey": "c1ia5q",
+		"language": "en",
+		"category": "C__CATG__ACCOUNTING"
+	},
+	"id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "apikey": "c1ia5q",
+        "object": 41,
+        "category": "C__CATG__ACCOUNTING",
+        "data": {
+            "contact": [
+                9
+            ],
+            "order_date": "2018-08-16",
+            "order_no": "12345",
+            "guarantee_period_unit": "Months",
+            "delivery_note_no": "Test1",
+            "guarantee_period": 48,
+            "acquirementdate": "2018-08-16",
+            "delivery_date": "2021-12-05",
+            "account": 2,
+            "inventory_no": "asdadsa100000",
+            "invoice_no": "123123",
+            "procurement": "Extern",
+            "cost_unit": "Cost unit",
+            "price": 12012,
+            "operation_expense": 1500
+        }
+    },
+    "id": "1730579620",
+    "language": "en"
+}
+
+## CPU
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+	"jsonrpc": "2.0",
+	"method": "cmdb.category.read",
+	"params": {
+		"objID": 1122560801,
+		"apikey": "c1ia5q",
+		"language": "en",
+		"category": "C__CATG__CPU"
+	},
+	"id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "apikey": "c1ia5q",
+        "language": "en",
+        "category": "C__CATG__CPU",
+        "object": 1122560801,
+        "data": {
+            "title": "Athlon 64 CPU @ 2.5 GHz",
+            "manufacturer": "AMD",
+            "type": "Athlon 64",
+            "frequency": 2.5,
+            "frequency_unit": "GHz",
+            "cores": 5
+        }
+    },
+    "id": 1
+}
+
+## File
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "id": 1,
+    "version": "2.0",
+    "method": "cmdb.object.create",
+    "params": {
+        "type": "C__OBJTYPE__FILE",
+        "title": "File-%",
+        "categories": {
+            "C__CATS__FILE_VERSIONS": [
+                {
+                    "file_physical": "test.png",
+                    "file_content": "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",
+                    "file_title": "test.png"
+                }
+            ]
+        },
+        "apikey": "c1ia5q",
+        "language": "en"
+    }
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.category.read",
+    "params": {
+        "apikey": "c1ia5q",
+        "objID": "1122561593",
+        "category": "C__CATG__FILE"
+    },
+    "id": "467264048"
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "id": 1,
+    "version": "2.0",
+    "method": "cmdb.object.create",
+    "params": {
+        "type": "C__OBJTYPE__FILE",
+        "title": "File-{{$randomCity}}",
+        "categories": {
+            "C__CMDB__SUBCAT__FILE_VERSIONS": [
+                {
+                    "file_content": "dGVzdAo=",
+                    "file_physical": "{{$randomCommonFileName}}",
+                    "file_title": "{{$randomFileName}}",
+                    "version_description": "{{$randomPhrase}}"
+                },
+                {
+                    "file_content": "dGVzdAo=",
+                    "file_physical": "{{$randomCommonFileName}}",
+                    "file_title": "{{$randomFileName}}",
+                    "version_description": "{{$randomPhrase}}"
+                },
+                {
+                    "file_content": "dGVzdAo=",
+                    "file_physical": "{{$randomCommonFileName}}",
+                    "file_title": "{{$randomFileName}}",
+                    "version_description": "{{$randomPhrase}}"
+                },
+                {
+                    "file_content": "dGVzdAo=",
+                    "file_physical": "{{$randomCommonFileName}}",
+                    "file_title": "{{$randomFileName}}",
+                    "version_description": "{{$randomPhrase}}"
+                }
+            ]
+        },
+        "apikey": "c1ia5q",
+        "language": "en"
+    }
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "id": 1,
+    "version": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122704399,
+        "category": "C__CATG__FILE",
+        "data": {
+            "file": [1122600558, 1122600558]
+        },
+        "apikey": "c1ia5q",
+        "language": "en"
+    }
+}
+
+## Virtual device
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122549952,
+        "apikey": "c1ia5q",
+        "category": "C__CATG__VIRTUAL_DEVICE",
+        "data": {
+            "host_stor_device": "host_stor_device",
+            "host_ldev_client": null,
+            "host_drive": "host_drive",
+            "host_port": "host_port",
+            "host_interface": "host_interface",
+            "host_raid": null,
+            "local_stor_device": "Device",
+            "device_type": "Client Device",
+            "local_port": "Port",
+            "local_interface": "Interface",
+            "storage_type": 4,
+            "network_type": null,
+            "switch_port_group": null,
+            "cluster_storage": null,
+            "cluster_interface": null,
+            "disk_image_location": "/Path/to/image",
+            "description": "API",
+            "virtual_network_type": null
+        }
+    },
+    "id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122549952,
+        "apikey": "c1ia5q",
+        "category": "C__CATG__VIRTUAL_DEVICE",
+        "data": {
+            "local_port": 74002,
+            "network_type": 1,
+            "host_port": 74003,
+            "description": "Network API"
+        }
+    },
+    "id": 1
+}
+
+## Location
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+	"jsonrpc": "2.0",
+	"method": "cmdb.category.read",
+	"params": {
+		"objID": "1122698608",
+		"category":"C__CATG__LOCATION",
+		"apikey": "c1ia5q",
+		"language": "en"
+	},
+	"id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122704399,
+        "category": "C__CATG__LOCATION",
+        "data": {
+            "parent": "1122600490",
+            "option": 3,
+            "insertion": 1,
+            "pos": 10,
+            "latitude": "51.2277411",
+            "longitude": "6.7734556"
+        },
+        "apikey": "c1ia5q"
+    },
+    "id": 1,
+    "version": "2.0"
+}
+
+## Virtual machine
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122549952,
+        "apikey": "c1ia5q",
+        "category": "C__CATG__VIRTUAL_MACHINE",
+        "entry": 804,
+        "data": {
+            "virtual_machine": 2,
+            "hosts": 1122562254,
+            "system": 1,
+            "config_file": "something",
+            "primary": "CareBear Power VirtHost1",
+            "description": "NULL"
+        }
+    },
+    "id": 1
+}
+
+## Software assignment
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "id": 1,
+    "version": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122704399,
+        "category": "C__CATG__APPLICATION",
+        "data": {
+            "application": 1122704400,
+            "application_priority": 1,
+            "assigned_license": 163,
+            "assigned_database_schema": 1122704402,
+            "assigned_it_service": [
+                1122704384
+            ],
+            "assigned_version": "CareBear Power Application Version",
+            "assigned_variant": "CareBear Power Application Variant",
+            "bequest_nagios_services": 1,
+            "assigned_databases": [
+                597
+            ],
+            "installDate": "2018-01-01 12:00:00",
+            "description": "API"
+        },
+        "apikey": "c1ia5q",
+        "language": "en"
+    }
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "id": 1,
+    "version": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122561251,
+        "category": "C__CATG__APPLICATION",
+        "entry": 329319,
+        "data": {
+            "assigned_version": 46745
+        },
+        "apikey": "c1ia5q",
+        "language": "en"
+    }
+}
+
+## Cabling
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122702040,
+        "category": "C__CATG__CONNECTOR",
+        "data": {
+            "title": "String",
+            "type": "Output",
+            "wiring_system": 1,
+            "interface": "StrinmgoderInt",
+            "fiber_wave_lengths": [
+                1,
+                2
+            ],
+            "connection_type": "String oder Int",
+            "assigned_connector": 1,
+            "assigned_category": "String",
+            "cable_connection": 1,
+            "used_fiber_lead_rx": "String oder Int",
+            "used_fiber_lead_tx": "String oder Int",
+            "connector_sibling": 1,
+            "relation_direction": 1,
+            "description": "TEXT"
+        },
+        "apikey": "c1ia5q"
+    },
+    "id": 3,
+    "version": "2.0"
+}
+
+## Assigned Workstation
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "apikey": "c1ia5q",
+        "language": "en",
+        "category": "C__CATG__ASSIGNED_WORKSTATION",
+        "object": 14,
+        "data": {
+            "connected_object": 1122604232
+        }
+    },
+    "id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+## Direct attached storage
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122566523,
+        "category": "C__CATG__STORAGE_DEVICE",
+        "data": {
+            "unit": "GB",
+            "title": "WESRVMGMT01_8eed9f258850472dacdf3d0f39a57e70",
+            "capacity": 127.9
+        },
+        "apikey": "c1ia5q"
+    },
+    "id": 3,
+    "version": "2.0"
+}
+
+## Object picture
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+	"method": "cmdb.category.save",
+	"params": {
+		"object": 1122704399,
+		"category": "C__CATG__IMAGE",
+		"data": {
+			"image_selection": 1
+		},
+		"apikey": "c1ia5q"
+	},
+	"id": 3,
+	"version": "2.0"
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+	"method": "cmdb.category.save",
+	"params": {
+		"object": 75544,
+		"category": "C__CATG__IMAGE",
+		"data": {
+            "description": "description",
+			"image": "iVBORw0KGgoAAAANSUhEUgAAAPUAAADNCAMAAABXRsaXAAABZVBMVEX\/\/\/\/9AwT\/\/f4AAAADAwP\/\/Pz\/+\/z\/AgTyAAD\/\/\/3kAADrAADKAADoAADzAADtAAD\/7e3cAAD\/8\/P\/6Of\/+PfZAAAyMjL\/0dL\/4+K3t7cjIyP\/3dzOGRn\/8fHRAAA8PDzk5OTNzc3x8fFWVlbTKiqoqKiPj49wcHCdnZ0VFRXvjIw\/Pz+Xl5fW1tYrKytMTExqamraaGnykpEOAACGhoaHh4fBwcEYGBhRUVHOVlXULi7Ozs5gYGDLCgv\/yMfYHRwdAAAnAAAzAABDAAD9t7d2AAAuAAC1DA1iCwvfSEjhWVngFRXxnp7\/s7LkenrYYmPbQEDsmJfsb2\/+pKT3lJL2XF34eHfcU1KVFhV3FhbxgoK1AACcAACkRUXhuLjQQD9qWlhuLi1OGBlPCwuyGxyRCgpmAABAJSS7XFuwenqcWVnEKyvYiIddSUqHAAC6NTSPKimFSEnEq6vPcnJSKivqKy32bm54vOKJAAAd3ElEQVR4nO1dCUPbSJYuSy7ZsmP5BNsYgxEYc5nTmIzBhgQTAgbaId1DmmSnZzrH7M7M9u7Obvr3b12SqlQlDAkEw+Ql+JAtWZ\/eq3fVqycAvtN3+k7f6TvdmDSNvYCYtCu\/+\/gokyrl86VUzrzvE\/lmZBqZzkK\/\/eRJ+2g9n4P\/EsA1AEv\/mIlFLUTRWOsk8y8B2zSzxyPJUAT9Q5TsLaTgfZ\/SNyAzc5mmiDFFQiOvMvd9SndPJuy2rRBH0V4ePEpdbnIj1yyvJUMCxc6wBXt8wHnUue5uRERttTsI9uND7ZGplY4SaDQLwJPnj1yhQWMtZoX8tNvNcV7boyIs5ho8nZBBhxKtEnjERhumjqMS5ghWaDlPxs1HcwEYksyJX5VR3NZEhxvZjwy11vmcVKFGCu04+2iwekRQw\/Jxwi\/bzqveqwyD\/Yi0GkEEuxOWmtWRSLyVfzzjmSeYPU66KCWFljjPPR4mu6SB1FlazWlC1sTpI3RVNNjZla0Wr9COSo8Qdvk8fhXoUGTEVWiPhkzslV0h4Ah1tNd9TKiRcjZhqZW8CjOmxPFjikIw6tRZbBBopNBePyLUGsLd3b1avonHYrVKjyd1qCFTPUCVMeSxs9RjQv3jiBxg+l0VHIXsdh\/NfIgG81ebao\/iR4XHMrTN1FpCMaiV43xk4ZEw24RIlV2P1Uih7eYfB2xYuvCrMjKko8pLkVhL3fcJ3wrB8xGVdCePflLpdSt98ggmOpFXptDfeAR3Oi2VjmNRyAMX8\/KZqMrYm\/TvufJCTKXR0n988PkFM3fik28KNNkvGTDTTyhQh4TU4YMkmO9HJch09CLnRa3c48eFBy7fuT+mBUZjQk+JPxSgpsHUWYK7GK64904edjYJdkRVFo2le712O73byQENUb5PUsU+1FYr\/5BRw4Joqq3ehzdvft5\/eXhpQAxak0Y9pdjxA06rmLlXI4LjacXevnt38Hz\/30oGAY1k\/MhTaBH32RrpGuChWi+Yb\/m1VTIRGz\/4+U8MtKYZHa9yIeKM\/VAk+UvpQc7kY5tbPlclUKyJsxTQTJPCzizEFDFnKHGZeXiYMWoUdaRVhsmayWNWQybjpYuEArU10zEeIK+xKvtFmUBJL+Q0jnInPdW3Yj89nCiE446ZuYwJ45VR\/CJFRzUgtgtoOWkckB1GToyHwmtOBRkdosoiPtTRXpdZLcCYDfPjUTnFEEm28qJjOtS2jKI2QfY4JjM6FEmfZVEcxos4zL160kvKGiB2ltF4pMOJmkotI5i7TEs4EFko6tC875N94J\/1\/Y\/tRDIdEycKSJHO0BMFzXidb6sS4NbIawS60qxWq03bwW0u6fqLT28+Hhy86\/GhSuKoYGoPJOokqM3cmTKITBylNLC0EtZ1fX66yGCbdnNF1\/c2EPaPaT5jHFuHD6g2RzNzp7sq0NHdjmmv6g5tMtjIn\/nL841wOLzx\/pDXAbjqEDycoiQz31flgkMj62VzU\/fI4TaEf\/oVo9b3DtpIRqwkK8VLnGfhg0GtwUvlXF70oqRV5jnUK7aj0Wp7BPXGi0+HvUT68F2barbd04eg0CjBknKu2po4NUCRA61vNSmzQVPXKeg9hPvNm\/1n+weHcXSIeKv0QDiNKwiVqiz2Q84AszzqMBVxUFnEoPfev\/nw5v3e3h4a4\/qzjySVKFQdDjNpGbVnHf2c16CK18CuYVZvPP+QSMbaB\/sb+BKgN2Ryd6LzMCZ3tXwrrsz4vspgtvKoF4nNBktEvjc+tZEnl+x9eIne6S+Rvcc5tgdSdQgzalUWPy4Y2BFb8utwzH48qP\/67z3itO9+0pEy\/5ikmcVIev0hrAuBHVUxdMjaxVEH+hyLM2evAaiPEdD6P\/N9vKN1uK+HN\/YPnYMkW51hD7RxWYI0l4cpEjvH8j1VrABQpcZruYjBbDcmMeiwPg1zCzgLkfy4pz8\/OIy5cQvac8gVmqZl\/qGsIIzPZBGn5zDa0UaxWqvN1QG0p2r4AhDQkxVgpC6Q7o8dbLx407O4GYOJk2FHDViG2y\/fvRM0OitjjmyP7sxWi41RnWEO6\/N4iMMOYnb84\/6BOCUS7Q951aFWFlSZiz\/+QwECuEoh4kHsGGxnQ414K+WzNLpAbyfEMRJJL5TvG9iV5FvX4QrpTAdhmvVQEqTeK32MZFaAkT9S1OJForvdYWY2LMwoy25ir3LIQIUF0BxmfXIbgzZJ6lA935cdYjWeWVeqssRnJN+VZSVoHIMUKyx1qMHssWQBIjgZ8ePQMtuEnZmojDpi9boGMFZUoJHMTzdtkoahqI28VNlAHNPdoVVosCAwyrLwGutoNBpbyABY0xWo9dHalJdAo+nxBWe+j58biCTWhlPGSQUhf57tw3eH44fv3r178x\/VamNLBVpf8mEmcyEqhYZdOx720MSfMMtXEEbbn54\/f\/9y\/9mzZzgjpuJ02I2veTJeKxVa8qIwjKiRseWKa6zepw0ybMM+yywKeJ1HbdIZv7K6qDp9adw3RJk0scgkevhcgdL\/ftF2ISP4JiSzA0ZpRFVAb40MY9Vh4Zg\/16QCtb7iw61PAx61K+Pr6gKGteGLtI0F4VSRhHvuJlNdT5d8zNZrwrB27Vf2WMnsGFd1OBzjGuZHRK8s\/vbl8xf7+xtc4qS+6kc9q0QNje6MSqFF+16RzlCghmVpriPe\/vDm8OPfig41K5VJP+qirMIRaFNTrBLB1jt9Tpk9JEs5Tajwn6OJROzvJe4Eq351pldUqPHIVvvz1khnmPQ4LB0pzjISiq1nOCwNP2hdjRln116rFFoEGe37huoRafyiOMnERYlDQpPePOr5AFYjZmfPhRHjeKfpV8MzFwLlkIFQr5tz9ZQzvyFYMg61eAEgDmRUMt4i6fF71WUsDDKzF8ol9LFzg4ME\/AIe1huBqDWQeRVQdUjWPt0nbIY6dyKzGhf7z+QhD2tW4nU1UMIRtwt9pdFOD8mCZSPPVJmP38ipELhX8QWbuj4VgBpvRkZblVfHVYf3DZhQai0dklFHYucFU8QCaiLqsSDDRTerKxNDibPyPXGbdxPECkIvFTDTyYmoNVtQ4vr8HFQg5mQ8r5RxfOD7Qc2RmTpSVxD+MeMD5fNSnGncAHajsBMpNKWS\/Cl1X1VYDrPNnHouL9lCAZKIw171DeurlBmpQ03JqUNyQdfv20NjFYRUur0TQ6rWgCKvwdS8E3wx2HNXoCYiHjBRmBzP37Mez557CRSu6UtsrSAN2oYDmmVL9dmrQSMPLaNOq9yfQiOEog5fMTRFjlwow4cA2GwaT5+tMtQ1exBsLa9e+3S\/VYewNJ4UuMxAp9ch9DtbswzrZKXOXu3YA0Rc03JdZd1aol+6vzltTVJlBHUk2c8aDiC3MphNU6PRXGFcXwmy186uwJQLe8gvWLFLeG8ybnRnVJyw0l3u1NkTm+XSV2xg07kffXkAaqzIYX5CnE6hb6JPOveWOiwd+yoIqY+SvkxJAByzpTeBZu8wttcHSjiSkQV1wd5xljD7m0OHuXVFD0JcDJ33qzINbDP+4uASzt4ANW7vqFqoT8oA7oHM0rhiLg\/J94856dRBc56W3OApW1BkfA+KPoQ9PYXG\/1gk3s\/fB2ipRxujxB8yEqs1UKc+OBZwN7+gThZKFGS0v3WRDvGCFUYFD+toTzLVhBq0qAxnwF1xH+ScUYJ5dVplovtNqw5xIsMEpSOJ1VgE0wtl+bxdHa6PYdQV6p0JuZRgMnKvlIspkhfffC4EZgJ060VJHT+CUYoUWyum0PWn1+M1ZAtn\/PTti3S0jnpdx+4pDEC9qbtZI5ZC00evhRp5aB3VXEgkOXO3Rntqzqc4tExAMTRpGaxEXeEGNi2X1beuiRqWL9WK8\/wuoxAUOIw1heOTddPy8spkL0C+8ak\/JUhxmbAzyANnAfxklH5R1u6N3GFrMHsaT85NN11pIskd9boOzlQDkemgSubwx5DtAttjVMQHhx8O7FNpoStpNDNzZ0U6NlufEm7UnU0BEpc85qJqUKkKoEB9VKfRB3A98UGOON0R\/ZkpSaGRzgSxhfId6XG4XRxlpfubNsCur0aTthHnx9lpIFWGl2ACWmiBvO1Jx+UkT0aDDmws4sxn8RcgqTDbFfwlkrORhhRpDXZn5ssr6a5WcNnNTFy45IzwwkoXo4bHxXxV83CBIvZKcXGwBlYdhT4QtV2t4VAdZpDRVqzTTt5ha7DinFvBv1I1c+tqr6FXELyy7Un09dnmlM2WcNpNKuLI+wZLjnM2KNas12pjRGKMkjJ1iKsO74rZwnKNP\/+jFVX0oQuNiHMdJD2IRsXy4iwe32BzcTRMUGN11mQGuzFoZNvIk62RgDLzN7qI0\/fT0TutOizWdxjqvXfJaDIprZjG6+wE0JVpdylPEWANTo00jjnAlJM5rA0QcNgYndeL0K5UKv\/524RvSJG3iR+yHHtu1WvBB6tNrhAMn9rRRHvcH1pHWx2R0\/a0Jx4okl5yE8JL+Bo6qFdloRakHsB6dVRv1FYWd8Z+\/S\/lfF\/v9C476VQqhF9743Er\/dv+b+MJr8FJBNuQjHjycxxofceds0cabntqqukkGbaBH3K10RRxu7p077+V7T3vukHx9vLO2N5BIhJKH+gb+x89fkdC8VbZEAV8i0e9NQUqYSc17NYa6lJKHEA8jlYr3HQ2KDolqPregXJ5XPr8rjowEDYg09l4ibu6INS6vvH+Qy9uuWJmQGcyj77gQeM5rTmnrNIrsNR9JZXUgUM0tlR3+A24yiV97zDunzqN3HnVITIRf3qHvTKCWt94\/ulDj66wS6xlIemWQAvG8DUSUM8XxQWaDvlQu5G3PrnkGLwiNzumc8zm3KP4D3cZaZsmq96OHbCzfnEw3kskYhP9PGsR4Q5JMC2gqxDUS7ObDUa1WmMVMdWHetudC9O3mrSwg5\/01n89co0Hz\/I7LNIxTQBLNAhwUSN+Hxwefvz5f\/7JfG6n0Q8CEOZQL1GdJB4QSfO8D7XHWPRtZMyR8djhUf\/1f3cTUdk1jfq7jNwiatyDkMYAsd+8Ssm9\/f1n6N1O3RFuBkDjlPgqElfcWMAP0V+kYQiM1VdmEe5ZYdOvL9+8O5TbHZKqwzsa28YpK4ZOvv35V65CVA+PzeuLddHeaFpzmbJ7HjtnCtTNLeKocVtsoXIFj4yqVue26Wjb3vNPPQm1NdKFd1RoCUsXTrIy2nvz7IWLe7pZXBUrinDpzdbO7Ori09XGHF3NgkySWFUHppZ9M\/fMURVwr2x7tUv64tTq8ouX7xStLZO\/3JXRziy4UUfEar\/78JyBXqmT2ISbrAMoqiQ0ubpZbZLtADl2YyLqOgpPloQtzrwnL9Sjs27TDSROYOn\/1iYUiWILeUl3ose1PN\/DJWrFDvb2yMlUqZHl+MbMLhPwSZL6X9R92UFspkQ\/nOlrfWuUl+qtxdoyORAOVcDUn7vKdSHW3Sg0SFbM8r8z8Xb8ZyTlT21mpCZdq1Vnw51J6WKFJBK8LzBCQr\/iBKdY9zvZ4yV7dlIXtHmxWm0axCoCkFpQLpWL\/ZS9A30mVxBGo\/EZJOWzdWeprdMRo7Ligcanja0yQqSv+A6JRHeUdf0iY99m688rANQ3uaV+6HpVvdSrkVd26rXSJ8g9vFUpRw5y\/kgWLKuHDPeSvchQjxWJ3oINXUQ976CuoMADUZNQsfkUib9BhWMFJ6eaNHU6SRYFoECVV2s7XpxivFYW6yb7pVtGDfD9aBS\/FDp8pm\/NeT1+5gySKBFAs\/TJsq4k29ED89vYVQ+7k35ODO6JOXCWNZbVFVm3X6QT0IMw1PofEQQyzU3HiHunXEUHCEBdYZlE5IrOzZFkCy20lFaz4nQEY7fR+ayaQyZFOrfJbBhQQZg4L+DQcHTHXUW\/WpyUUddIMlhJ1LcBRhF9TlNMpDSJ9VARYD91Ms1YoanOJnaUvU3UKOoQ2wU7Q2m8BOFUsQ41Y9MPhz\/fUYQCXZedYpGMaDK4t+t17JI6c9jAHiU76fO0c0xVWu5HuxBQGS8plAwtGLhFGecrCDnoVvo1i+fRYyMcBBp9YJCeCku+w+IU5JJr7pi4EKuPBrW0xlH35rtN9Zp+5Dvlby1jaoLsuUKiIpHYcYGzvkuBqPEkx\/aWVDgKoK67C9mID67rdPQC279GhBxlE7p7Zs59\/Rso8Pgt3ZCUVH0FqLKZrpAL5mCH50VmF8GUAjXOPKy6vKZ5YxqrNJSrtTfd5pZQy39WllEjhWZSTn0talhQlt2EYgu+BHjV7V224iuAr+FyHKkOBQu1u+KFpReRLpysy4OaHGUJ0DyNRtaFKHNo7P59t2C3A4uhS\/4KlKqjyos+1E8Jav9qa9FLNeYm9eWlOtLdY6PqhcuzeBKNfRsWFDckxaw4M0yHXV9DsCNVEJJWB+lTQ5qsZnHIqi12UdAXYVGxzoO4pLb7TqtUKgYwyKVTom7Y3M6G+o6N0YnOLSzm1EDpWIpnSb+185Q8W0MyBfqk7XMx9GUstFJVHc6l8Ys\/AM3FNiRtyI6yyk8NQ0NdkZW8yDpF818h57mToApCuZgOm5za6M4UqIhtFPStZpX6YeKx0caxbf+1Q9oh7Dd99HEao3Yzc1qpRT0nJ4vGnntfe8t4PI5KM+5dMIXxc+lf18G4ZVdQHFH3G2wSg1cM265U6nUUfhRR7Dg3V9M514MdoTJKAy\/BkReLjFnBT0bZXh83KP46XYbnjb0iAb6TR\/wiq+K0c622pZXWojXnyL\/6wymz9XDriywsGRVRw+ya3F4fUeL3r41CcAWhqql5rKuusFKk7smJ12pBqOeAuxvZ1Q0wXdh6tb5FS\/Q8HYDlHBqd8WhImtu9hRuSli7iEQXs9LlcQchjl3oJPJ0OQj3rk3BvOSeDjQxAncz66GGsDulsA73muQVV3+qvLWDQMuu4pxw3uUKfov28IStwjuFSLwHM6\/na5uzSXLWKQpCpeh2ZKRuNYX9ZpeCBUzFvskVR1Ah42gxBL7QSCtRf1BqMjE967+ZOW5ms6Z3krlh3B+r+KFFfrG9i0+z\/JRtJgG\/Ni\/HUl0wgUwiztPOKVFCeU94TJxL9fJP79xGoTttzUkGoLlI+zgaAJlesOimFxqvYCI9K5WU4iBbXvCC\/1LerPjrrxJ1yQTlZna66hYR4Q9KrDTeHGlPAnVfIzGkAahQ+7sg+BkJdc7qPCifd0MU1L9jL8e06jy8MLctTFJTDjqJIJhKxJl7zc9o3cFfcu+zQA3kHTV+q\/BMK2l5SGFoULWHUT21phzlxMhdUnkoXbBY75lVqxPmCctZmH56oVgT7WoMhXXBNzEBLXcYkRRHCLl9gsSjY3hHy2FsNVomxiV3uHQk1cc54sXVndzxjvWPTUkx6GI7L7Dkr16mHpBuSXpfXKHLvIE0hTxZbvddIlanrgm0PNNZDjQqgvNNXoRo1bjvroUbOjQu6xuw2vip4asgtOPaTETAXsvtFd1iGKT5u59rWn5UDWT217J51eBon7tnMFRq8O5K2xjs0w1z8CWx3UCNF4MTYegMCY4n0LZVCVUIB9fm4SOfm4UfAuoPoiBRVeyDqkw6DakU6k0mdNH1yG9mohrzgaWqMyzUYbgZFD1dwoo2+JiWYtBV1TfISsPHO\/6JMeoxc3hi1CTqtpCze+OamgaA9ZaTXTGfyh4rmcnEae2ESVRaRS+oyft6VlKpba8rK8mzqyG1KqJHc5U7VpqZ3w\/k+3C54LagYOhA0qaxjUumeHVvHNYm8sPkxmcKuCHjRKQJnuBcMDw\/m4iLUy3WgyTold+TIeIS3NYkbFukg1CcjKv1N2gd6JA1whz9u5hPwIZSamJLzClCYCYfOOm082zfHws\/FIpArbg3luhDiQl4HthMrmmZWnYJE9oAH7WsX4RYMcai9spIg1Kx1etHT33UncHMlhzIefxunUNnoAU60ZmQW\/IJJ7mkYPSrdKHsWsF4uOi4voRdQO+vpvXyvF0zoi9MyLSOpJSXFjiIMu1GYe8H0HcAyqGNNZMOe1p3S623X2SsdK1dkpM+vU5HFdJ4GlW3VIiG8uuRK1MzLwOfpyEPV1VH+qQ9MeKII1+p4rSZciXeuF80ygmatNos0O06qkaUVWA8sUlsPc9lLJWpr5Dp3FWCoYeFcKd\/x86Cow0HNjKw+LW9D5khumkFmfSuUlQw081C96Q82XMjwQ49FZOxqFUALsceqaIsBO2d9arz8LnniuHBt66WOOkj8NgA1G4qCyw0aLuwm8KkiQFOnrr72+om4bZO81SNsF1yovly0Wbl6wwapH8djSi6FblJ1CPM91UEi6VcZU6G3uRMCU2EHNe8xLzlJzuWmz+wQ56wIvPQ5KfzXOOMtpRPRr8whdrtTxyulsxFLEWwyGW9d86a7MLOmVmV9rMpMv97mTqcyxc4V9xHgtttOSbw+72uxC+qEu17JPIs7XcuPFKNiXXOTz0e9f6ucBGEU+72scYM3iEzzVHnPXnw\/mqsVeHF0bJLxelFYzwHc5n1EdfGf2MjB3nScTzIG6Paaq8oUK0MAd98nHd8kIxh0hFQdXoPVXgWhQImrE4SkQ58eNBbdHKAfBCCT+e41YQG0pwFVbYOAM6ZZJHagDBgY6kj076Vr6LMyKUuQl2C28leCZmvzREH1PnQWeiz6p7AR6rAbqU1Tw4hXBDjybUsuKH\/HEPKlA6Ub7rHrcnDVoZbfDVJlV6PW7Gn3RPTRbZ8gL1KPctV\/NebIXL3DavYpt+hhsiFoCPI7DQGz\/uyjMmJwidyQdIB8l9U9CJM4\/TaA2fbqIq0SRspazOs5bvSSP1KEXArZi7S57lhi3om4oNtjHObwxvuPyolsjmJHg4y24W9sxK7XxCBTjc8HGPXqbA0Pb18oDXDrI31M0Uehpnse67KjDGxu9pss4hWJ3huFfmXjpbTGSj759InCQ+Mb05EehDKzY2equTwVcGBXmtWiLxuKi8f0UUUmhDQzdMgVZtDkyrS20GARrCX6ie05Oset7708TKjO1yeovvk+XyqYVhDKmdZ4f4Aq8yGXgkFQmZsVjZkDULMr9anq3Nxc1b0RBCKjMlWs1qZXVlamm+4sjwD8n395\/uL5e7yqbABq\/KGv6tAn72ZXKS6R3dOMBiE0rkVoKKCvQkwGNOkzjQvp5+S8oWZ4EBxBgwIwVxRl1OjjfKvdbvcSVzkoHCEACrgaSZ4GVRBaP5VS5cxNKJfLZcj\/XM55ypAtGbaNJ+dyiRvYE1nY4Gt2iaOsy1jUsgbKtsO2xBHp5+kb3Rq5DPBHdedc6\/PFH1T0g0RrEp2p6RL9LUi0LtHrbiHjn1NDkXCuo1oQcAUFtwYzOq2AfaxkMhn3KJkk7\/lN8YT3IoH\/yxRLxGLkET3H8PtrUTp93C05uB2eZzrKEvFgXpPWYCrMptCD0L9XhN0PznkVcTcEvLk1smITRwudsuGihkZhvXW1YyKfP8kNKECbZlct3zelwKjviymaaK11s85QL3cv1KWOV9Nu1++hkXK8jFqVDQVZiXT6p5Nut9M5+b2XviLGCqRI8nOeKm3PPGBVlqdVa7fOqVuhCAI+MoFoJKa4Mfq1CHtaImoAxLvw+H5SVZryjej2fth6ooi0DXVdpnAGX\/ZzN95t8A5fciZW+ke54Xqh\/wVHui\/6ouufPM75y4lhvvVlrLw32b8mcafXzwIfwfzMkJ\/+V1NEXtRofimvHw5FaMApjOvyEfd58J4DvzHEdJTixzWtqDtXe3kD8Q3ZBQjWM4lzyCszVkf4RFVb\/\/BQB31A7bWHWiN9jDP+6oQBcBRNj6+974Aj3\/aFJMdLHKsKqJE+U3X0\/aJfuPdDyMdM7ipjTRN2LtLEyXVDRyGy5M+HBpbuC\/qOCzm9yFQMRUOKzSF2LPf3+CZ5ESE0+II4gXnTVqIV0F\/ehKWzXiwZjeJbf+K\/KyjJvbau+PbVh7H4\/ZVfHXAa3McWJXrnUst562xNHHXUSzjR4IbZzmV\/vD3eb7XbM0cz7XbrCL\/Dm47QplYfb+qzTTP4HX4YJ5ta\/Var1e\/TvyCaEWh8fGYcPZIHkdqB9OTGhAK1J2+POgEdomheMlfOFrLlVLaQQi8KKfQiSx7IplSKvWMP\/BdSmMpl\/FdO3ZiyIhXIf\/YikEoC5fPoDz3myWuPuqfdTr6Uu2pZmwbgPZEBDfr\/Zns5OxgD9guG\/J2+03f6Tt\/pO32n4aT\/By+YcJGBIQ4dAAAAAElFTkSuQmCC"
+        },
+		"apikey": "c1ia5q"
+	},
+	"id": 3,
+	"version": "2.0"
+}
+
+## Cluster member
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "category": "C__CATG__CLUSTER_MEMBERS",
+        "object": 53,
+        "data": {
+            "member": [
+                51,
+                52
+            ]
+        },
+        "apikey": "c1ia5q",
+        "language": "en"
+    },
+    "id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "category": "C__CATG__CLUSTER_MEMBERSHIPS",
+        "object": 1122561781,
+        "data": {
+            "connected_object": [
+                1122561782
+            ]
+        },
+        "apikey": "c1ia5q",
+        "language": "en"
+    },
+    "id": 1
+}
+
+## Person group members
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "apikey": "c1ia5q",
+        "language": "en",
+        "category": "C__CATS__PERSON_GROUP_MEMBERS",
+        "object": 14,
+        "data": {
+            "connected_object": 1122701980
+        }
+    },
+    "id": 1
+}
+
+## Person group memberships
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "apikey": "c1ia5q",
+        "language": "en",
+        "category": "C__CATS__PERSON_ASSIGNED_GROUPS",
+        "object": 1122702033,
+        "data": {
+            "connected_object": [
+                1122698677
+            ]
+        }
+    },
+    "id": 1
+}
+
+## Assigned objects organization
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+	"method": "cmdb.category.save",
+	"params": {
+		"object": 1122544325,
+		"category": "C__CATS__ORGANIZATION_CONTACT_ASSIGNMENT",
+		"data": {
+			"object": 1122561251,
+			"role": "Administrator"
+		},
+		"apikey": "c1ia5q",
+		"language": "de"
+	},
+	"id": 1,
+	"version": "2.0"
+}
+
+## Service
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+	"jsonrpc": "2.0",
+	"method": "cmdb.category.save",
+	"params": {
+		"apikey": "c1ia5q",
+		"language": "en",
+		"category": "C__CATG__IT_SERVICE",
+		"object": 60,
+		"data": {
+			"connected_object": [270,270]
+		}
+	},
+	"id": 1
+}
+
+## SIM
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.update",
+    "params": {
+        "objID": 1122601205,
+        "entry": 7,
+        "apikey": "c1ia5q",
+        "language": "en",
+        "category": "C__CATG__SIM",
+        "data": {
+            "threshold_date": ""
+        }
+    },
+    "id": 1
+}
+
+## Drive
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "apikey": "c1ia5q",
+        "language": "en",
+        "category": "C__CATG__DRIVE",
+        "object": 1122561251,
+        "data": {
+            "description": "RAID",
+            "mount_point": "/dev/test",
+            "title": "Drive-Title",
+            "filesystem": "Ext3",
+            "capacity": 100,
+            "unit": "TB",
+            "serial": "123DA",
+            "drive_type": 1,
+            "raid": "14",
+            "category_const": "C__CATG__RAID",
+            "free_space_unit": "MB",
+            "used_space_unit": "MB",
+            "firmware": "ASD"
+        }
+    },
+    "id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "apikey": "c1ia5q",
+        "language": "en",
+        "category": "C__CATG__DRIVE",
+        "object": 1122778119,
+        "data": {
+            "description": "STORAGE",
+            "mount_point": "/dev/test",
+            "title": "Drive-Title",
+            "system_drive": "No",
+            "filesystem": "Ext3",
+            "capacity": 100,
+            "unit": "TB",
+            "serial": "123DA",
+            "device": 1479,
+            "category_const": "C__CATG__STORAGE",
+            "free_space_unit": "MB",
+            "used_space_unit": "MB",
+            "firmware": "ASD"
+        }
+    },
+    "id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122609441,
+        "category": "C__CATG__DRIVE",
+        "data": {
+            "description": "STORAGE",
+            "mount_point": "/var",
+            "title": "/dev/data",
+            "system_drive": "0",
+            "filesystem": "XFS",
+            "capacity": 60,
+            "unit": "GB",
+            "device": "devicce",
+            "category_const": "C__CATG__STORAGE"
+        },
+        "apikey": "c1ia5q",
+        "language": "en"
+    },
+    "id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "apikey": "c1ia5q",
+        "language": "en",
+        "category": "C__CATG__DRIVE",
+        "object": 1122609442,
+        "data": {
+            "title": "Drive-Title",
+            "ldev": 6,
+            "category_const": "C__CATG__LDEV_CLIENT"
+        }
+    },
+    "id": 1
+}
+
+## Contact assignment
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "apikey": "c1ia5q",
+        "language": "en",
+        "category": "C__CATG__CONTACT",
+        "object": 1122704399,
+        "data": {
+            "contact": 14,
+            "role": 1
+        }
+    },
+    "id": 1
+}
+
+## Contract
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122509758,
+        "category": "C__CATS__CONTRACT",
+        "data": {
+            "type": "Leasingvertrag",
+            "contract_no": "23125",
+            "customer_no": "3456456",
+            "internal_no": "567879",
+            "costs": 1.00,
+            "cost_calculation": "Gesamtkosten",
+            "product": "test",
+            "reaction_rate": "",
+            "contract_status": "",
+            "start_date": "2020-06-29",
+            "end_date": "2020-06-30"
+        },
+        "apikey": "c1ia5q",
+        "language": "de"
+    },
+    "id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122456621,
+        "category": "C__CATS__CONTRACT_INFORMATION",
+        "data": {
+            "type": "Leasingvertrag",
+            "contract_no": "111",
+            "customer_no": "111",
+            "internal_no": "111",
+            "costs": 1.00,
+            "cost_calculation": "Gesamtkosten",
+            "product": "test",
+            "reaction_rate": "",
+            "contract_status": "",
+            "start_date": "2020-06-29",
+            "end_date": "2020-06-30"
+        },
+        "apikey": "c1ia5q",
+        "language": "de"
+    },
+    "id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122546654,
+        "category": "C__CATS__CONTRACT_ALLOCATION",
+        "data": {
+            "assigned_object": 9
+        },
+        "apikey": "c1ia5q",
+        "language": "de"
+    },
+    "id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122546654,
+        "category": "C__CATG__CONTRACT_ASSIGNMENT",
+        "data": {
+            "connected_contract": 9
+        },
+        "apikey": "c1ia5q",
+        "language": "de"
+    },
+    "id": 1
+}
+
+## Host address
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122600468,
+        "apikey": "c1ia5q",
+        "language": "en",
+        "category": "C__CATG__IP",
+        "data": {
+            "primary_hostaddress": "10.10.10.122",
+            "primary_hostname": "Hostname",
+            "net_type": "IPv4 (Internet Protocol v4)",
+            "zone": 0,
+            "hostaddress": "10.10.10.122",
+            "dns_server": [
+                1122561849
+            ],
+            "dns_server_address": "172.21.88.18",
+            "dns_domain": [
+                "1.1"
+            ],
+            "use_standard_gateway": "No",
+            "assigned_port": 55354,
+            "all_ips": "10.10.10.122",
+            "hostname": "CareBear Power Server 10",
+            "ipv4_address": "10.10.10.122",
+            "domain": "asd",
+            "primary": 1,
+            "ipv4_assignment": 2,
+            "active": 1,
+            "primary_fqdn": "Test1.test",
+            "description": "API"
+        }
+    },
+    "id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122704399,
+        "entry": 26939,
+        "apikey": "c1ia5q",
+        "language": "en",
+        "category": "C__CATG__IP",
+        "data": {
+            "primary_layer3_net": "String",
+            "primary_hostaddress": "string",
+            "primary_hostname": "String",
+            "net_type": "1string",
+            "zone": "1tring",
+            "ipv6_assignment": "1String",
+            "ipv6_scope": "1string",
+            "ipv6_address": "string",
+            "hostaddress": "string",
+            "dns_server": [
+                1
+            ],
+            "dns_server_address": "string",
+            "dns_domain": [
+                1,
+                "string"
+            ],
+            "use_standard_gateway": "1string",
+            "assigned_port": "1string",
+            "assigned_logical_port": "1string",
+            "all_ips": "string",
+            "hostname": "Server-1",
+            "domain": "asd",
+            "primary": 1,
+            "active": 1,
+            "net": 20,
+            "primary_fqdn": "Test1.test",
+            "description": "API"
+        }
+    },
+    "id": 1
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "id": 1,
+    "version": "2.0",
+    "method": "cmdb.object.create",
+    "params": {
+        "type": "C__OBJTYPE__SERVER",
+        "title": "Server-111",
+        "categories": {
+            "C__CATG__IP": [
+                {
+                    "hostname": "Server-1",
+                    "ipv4_address": "0.0.0.123",
+                    "domain": "",
+                    "primary": 1,
+                    "ipv4_assignment": 2,
+                    "active": 1,
+                    "net": 20,
+                    "primary_fqdn": "Test1.test"
+                }
+            ]
+        },
+        "apikey": "c1ia5q",
+        "language": "en"
+    }
+}
+
+## Logical ports
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 8311,
+        "data": {
+            "net": [
+                20
+            ],
+            "title": "bond0",
+            "port_type": "bond",
+            "ports": [
+                "242"
+            ],
+            "addresses": [
+                "170"
+            ],
+            "active": "Yes"
+        },
+        "category": "C__CATG__NETWORK_LOG_PORT",
+        "apikey": "c1ia5q",
+        "language": "en"
+    },
+    "id": 1
+}
+
+## Network
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "id": 1,
+    "version": "2.0",
+    "method": "cmdb.object.create",
+    "params": {
+        "type": "C__OBJTYPE__SERVER",
+        "title": "A Net Listener Test",
+        "categories": {
+            "C__CATG__IP": [
+                {
+                    "net_type": 1,
+                    "primary": 1,
+                    "active": 1,
+                    "ipv4_assignment": 2,
+                    "ipv4_address": "172.21.88.35",
+                    "hostaddress": "172.21.88.35"
+                }
+            ],
+            "C__CATG__NETWORK_PORT": [
+                {
+                    "title": "Port01",
+                    "layer2_assignment": [
+                        43455
+                    ]
+                    "addresses": [
+                        5
+                    ]
+                }
+            ],
+            "C__CATG__NET_LISTENER": [
+                {
+                    "protocol": "TCP",
+                    "protocol_layer_5": "",
+                    "ip_address": "",
+                    "port_from": 80,
+                    "port_to": 80,
+                    "opened_by": 1,
+                    "gateway": null
+                }
+            ]
+        },
+        "apikey": "c1ia5q",
+        "language": "en"
+    }
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "method": "cmdb.category.save",
+    "params": {
+        "objID": 1122715088,
+        "category": "C__CATG__NET_LISTENER",
+        "data": {
+            "protocol": "TCP",
+            "protocol_layer_5": "A",
+            "ip_address": "172.21.88.35",
+            "port_from": 80,
+            "port_to": 80,
+            "opened_by": null,
+            "gateway": null
+        },
+        "apikey": "c1ia5q"
+    },
+    "id": 3,
+    "version": "2.0"
+}
+
+## SLA
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122560816,
+        "apikey": "c1ia5q",
+        "category": "C__CATG__SLA",
+        "data": {
+            "service_id": "123456",
+            "service_level": "Failure contingent in hours",
+            "service_level_dialog": "11",
+            "days": 1000111,
+            "monday_time": "09:00 - 17:00",
+            "tuesday_time": "09:00 - 17:00",
+            "wednesday_time": "09:00 - 17:00",
+            "thursday_time": "09:00 - 17:00",
+            "friday_time": "09:00 - 17:00",
+            "saturday_time": "09:00 - 17:00",
+            "reaction_time": 5,
+            "reaction_time_unit": "Hours",
+            "recovery_time": 5,
+            "recovery_time_unit": "Hours",
+            "calendar": "Me"
+        }
+    },
+    "id": 1
+}
+
+## Monitoring
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "jsonrpc": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 42965,
+        "apikey": "c1ia5q",
+        "category": "C__CATG__MONITORING",
+        "data": {
+            "active": "No",
+            "monitoring_host": "CMK",
+            "host_name": "11111",
+            "description": "CheckMK Autoupdategruppe -> AU_not_activ1"
+        }
+    },
+    "id": 1
+}
+
+## Custom category
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "method": "cmdb.category.save",
+    "params": {
+        "language": "en",
+        "apikey": "c1ia5q",
+        "category": "C__CATG__CUSTOM_FIELDS_ALL_IN_ONE",
+        "object": 1122704399,
+        "data": {
+            "f_popup_c_1614866069648": [
+                "A"
+            ],
+            "f_popup_c_1614866070151": "2022-11-25",
+            "f_popup_c_1614866070995": null,
+            "f_popup_c_1614866071438": [
+                "asd"
+            ],
+            "f_popup_c_1614866071803": null,
+            "f_wysiwyg_c_1614866073504": "textual-content",
+            "f_link_c_1614866074209": "textual-content",
+            "f_popup_c_1614866093393": null,
+            "f_popup_c_1665672778858": null,
+            "f_popup_c_1614866094647": null,
+            "f_popup_c_1614866096132": null,
+            "f_text_c_1614866097624": "textual-content",
+            "f_password_c_1614866098381": "textual-content",
+            "f_textarea_c_1614866099343": "textual-content",
+            "f_time_c_1614866146521": null,
+            "f_dialog_c_1614866149150": null
+        }
+    },
+    "id": 1,
+    "version": "2.0"
+}
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+

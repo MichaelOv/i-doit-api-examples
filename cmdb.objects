@@ -1,0 +1,215 @@
+# cmdb.objects
+
+## cmdb.objects.read
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.objects.read",
+    "params": {
+        "categories": [
+            "C__CATG__CONTACT",
+            "C__CATG__CUSTOM_FIELDS_2MULTIV"
+        ],
+        "filter": {
+            "type": 5,
+            "status": "C__RECORD_STATUS__NORMAL"
+        },
+        "limit": "0,10",
+        "order_by": "title",
+        "sort": "ASC",
+        "apikey": "c1ia5q",
+        "language": "en"
+    },
+    "id": 1
+}
+
+## cmdb.objects.read
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+[
+    {
+        "version": "2.0",
+        "method": "cmdb.objects.read",
+        "params": {
+            "filter": {
+                "type": "C__OBJTYPE__SERVER",
+                "status": "C__RECORD_STATUS__NORMAL"
+            },
+            "limit": "0,10",
+            "order_by": "title",
+            "sort": "ASC",
+            "apikey": "c1ia5q",
+            "language": "en"
+        },
+        "id": 1
+    },
+    {
+        "version": "2.0",
+        "method": "cmdb.objects.read",
+        "params": {
+            "filter": {
+                "type": "C__OBJTYPE__CLIENT",
+                "status": "C__RECORD_STATUS__NORMAL"
+            },
+            "limit": "0,10",
+            "order_by": "title",
+            "sort": "DESC",
+            "apikey": "c1ia5q",
+            "language": "en"
+        },
+        "id": 2
+    }
+]
+
+## cmdb.objects.read
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+  "version": "2.0",
+  "method": "cmdb.objects.read",
+  "params": {
+    "filter": {
+      "type": "C__OBJTYPE__CABLE",
+      "title": "KA\\_%",
+      "status": "C__RECORD_STATUS__ARCHIVED"
+    },
+    "apikey": "c1ia5q",
+    "language": "en"
+  },
+  "id": 1
+}
+
+## cmdb.objects.read
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+	"version": "2.0",
+	"method": "cmdb.objects.read",
+	"params": {
+		"filter": {
+			"sysid": "SYSID_2770042330"
+		},
+		"categories": [
+
+                "C__CATG__CONTACT"
+			],
+
+		"apikey": "c1ia5q",
+		"language": "en"
+	},
+	"id": 1
+}
+
+## cmdb.objects.read
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.objects.read",
+    "params": {
+        "filter": {
+            "sysid": "SYSID_1664958234"
+        },
+        "categories": [
+            "C__CATG__GLOBAL",
+            "C__CATG__MODEL",
+            "C__CATG__ADDRESS",
+            "C__CATG__ACCOUNTING",
+            "C__CATG__LOCATION",
+            "C__CATG__ASSIGNED_LOGICAL_UNIT",
+            "C__CATG__PERSON_ASSIGNED_WORKSTATION",
+            "C__CATG__CONTACT"
+        ],
+        "apikey": "c1ia5q",
+        "language": "en"
+    },
+    "id": 1
+}
+
+## cmdb.objects.read
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.objects.read",
+    "params": {
+        "filter": {
+            "type": "C__OBJTYPE__IT_SERVICE"
+        },
+        "categories": true,
+        "limit": "0,20",
+        "order_by": "title",
+        "sort": "ASC",
+        "apikey": "c1ia5q",
+        "language": "en"
+    },
+    "id": 1
+}
+
+## cmdb.objects.read
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.objects.read",
+    "params": {
+        "filter": {
+            "ids": "9",
+            "type": "C__CMDB__OBJTYPE__SERVER",
+            "type_group": "C__OBJTYPE_GROUP__OTHER",
+            "status": "C__RECORD_STATUS__NORMAL",
+            "title": "Server-1",
+            "sysid": "SYSID_",
+            "first_name": "",
+            "last_name": "",
+            "email": ""
+        },
+        "limit": "0,10",
+        "order_by": "title",
+        "sort": "ASC or DESC",
+        "apikey": "c1ia5q",
+        "language": "en"
+    },
+    "id": 1
+}
+
+## cmdb.objects.read
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.objects.read",
+    "params": {
+        "categories": [
+            "C__CATG__CUSTOM_FIELDS_TWO_YES_NO_FIELDS"
+        ],
+        "filter": {
+            "ids": [
+                9
+            ]
+        },
+        "limit": "0,10",
+        "order_by": "title",
+        "sort": "ASC or DESC",
+        "apikey": "c1ia5q",
+        "language": "en"
+    },
+    "id": 1
+}

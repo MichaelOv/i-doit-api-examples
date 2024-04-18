@@ -1,0 +1,207 @@
+# cmdb.object
+
+## cmdb.object.read
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/xml
+
+
+## cmdb.object.create
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/xml
+
+{
+  "id": 1,
+  "version": "2.0",
+  "method": "cmdb.object.create",
+  "params": {
+    "defaultTemplate": 1,
+    "type": "C__OBJTYPE__SERVER",
+    "title": "Serverxyz",
+    "apikey": "h3md6u3y",
+    "language": "en"
+  }
+}
+
+## cmdb.object.create
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/xml
+
+{
+	"id": 1,
+	"version": "2.0",
+	"method": "cmdb.object.create",
+	"params": {
+		"type": "C__OBJTYPE__VIRTUAL_SERVER",
+		"title": "CareBear Power Server",
+		"categories": {
+			"C__CATG__CPU": [
+				{
+					"title": "CareBear Power Server"
+				}
+			],
+			"C__CATG__MODEL": [
+				{
+					"serial": "1337ÜÄÖ"
+				}
+			]
+		},
+		"apikey": "h3md6u3y",
+		"language": "en"
+	}
+}
+
+## cmdb.object.create
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/xml
+
+{
+    "id": 5,
+    "version": "2.0",
+    "method": "cmdb.object.create",
+    "params": {
+        "type": "C__OBJTYPE__LICENCE",
+        "title": "CareBear Power License",
+        "categories": {
+            "C__CATS__LICENCE_LIST": [
+                {
+                    "key": "CareBear Power Key",
+                    "serial": "CareBear Power Serial",
+                    "type": 1,
+                    "amount": 10
+                }
+            ]
+        },
+        "apikey": "h3md6u3y",
+        "language": "en"
+    }
+}
+
+
+## cmdb.object.create
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/xml
+
+{
+  "id": 1,
+  "version": "2.0",
+  "method": "cmdb.object.create",
+  "params": {
+    "type": "C__OBJTYPE__SERVER",
+    "title": "MyLittleServer",
+    "sysid": "ASDASD2123",
+    "categories": {
+      "C__CATG__GLOBAL": [
+        {
+          "purpose": "Something",
+          "category": "Something",
+          "tag": [
+            "MeinTag1",
+            "MeinTag1",
+            "MeinTag1"
+          ]
+        }
+      ],
+      "C__CATG__MODEL": [
+        {
+          "serial": "1337ÜÄÖ"
+        }
+      ]
+    },
+    "apikey": "h3md6u3y",
+    "language": "en"
+  }
+}
+
+## cmdb.object.create
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/xml
+
+{
+  "id": 1,
+  "version": "2.0",
+  "method": "cmdb.object.create",
+  "params": {
+    "type": "C__OBJTYPE__ENCLOSURE",
+    "title": "Rack-1234",
+    "defaultTemplate": 1,
+    "categories": {
+      "C__CATG__FORMFACTOR": [
+        {
+          "rackunits": 44
+        }
+      ],
+      "C__CATG__LOCATION": [
+        {
+          "parent": 1122723263
+        }
+      ]
+    },
+    "apikey": "h3md6u3y",
+    "language": "en"
+  }
+}
+
+## cmdb.object.create
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/xml
+
+{
+    "method": "cmdb.object.create",
+    "params": {
+        "type": "C__OBJTYPE__CLIENT",
+        "title": "CareBear Power Client",
+        "categories": {
+            "C__CATG__ACCOUNTING": [
+                {
+                    "inventory_no": "12asd3123",
+                    "account": "2",
+                    "acquirementdate": "2018-01-01",
+                    "contact": [
+                        9
+                    ],
+                    "price": 5000,
+                    "operation_expense": 123123.5444,
+                    "operation_expense_interval": "per day",
+                    "cost_unit": "cost_unit",
+                    "delivery_note_no": "delivery_note_no",
+                    "procurement": "procurement",
+                    "delivery_date": "2018-01-01",
+                    "invoice_no": "invoice_no",
+                    "order_no": "123123",
+                    "guarantee_period": 1,
+                    "guarantee_period_unit": "Days",
+                    "guarantee_period_status": "guarantee_period_status",
+                    "guarantee_period_base": 1,
+                    "order_date": "2018-01-01",
+                    "description": "adasdasdasd"
+                }
+            ]
+        },
+        "apikey": "h3md6u3y"
+    },
+    "id": 1,
+    "version": "2.0"
+}
+
+## cmdb.object.archive
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/xml
+
+{
+	"id": 1,
+	"version": "2.0",
+	"method": "cmdb.objects.delete",
+	"params":{
+	"ids": [1122778590,1122778591],
+	"apikey": "h3md6u3y",
+	"language": "en"
+	}
+}

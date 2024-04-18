@@ -1,0 +1,135 @@
+# cmdb.category
+
+## cmdb.category.read
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+  "version": "2.0",
+  "method": "cmdb.category.read",
+  "params": {
+    "objID": 1122704399,
+    "status": 4,
+    "category": "C__CATG__CPU",
+    "apikey": "c1ia5q",
+    "language": "en"
+  },
+  "id": 1
+}
+
+## cmdb.category.create
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+  "version": "2.0",
+  "method": "cmdb.category.create",
+  "params": {
+    "objID": 1122704399,
+    "data": {
+      "manufacturer": "Name of manufacturer",
+      "title": "Name of model"
+    },
+    "category": "C__CATG__MODEL",
+    "apikey": "c1ia5q",
+    "language": "en"
+  },
+  "id": 1
+}
+
+## cmdb.category.update
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+  "version": "2.0",
+  "method": "cmdb.category.update",
+  "params": {
+    "objID": 1122704399,
+    "category": "C__CATG__MODEL",
+    "data": {
+      "serial": "123abc"
+    },
+    "apikey": "c1ia5q",
+    "language": "en"
+  },
+  "id": 1
+}
+
+## cmdb.category.delete
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.category.delete",
+    "params": {
+        "objID": 1122704399,
+        "category": "C__CATG__IP",
+        "id": 29258,
+        "apikey": "c1ia5q",
+        "language": "en"
+    },
+    "id": 1
+}
+
+## cmdb.category.save
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+    "version": "2.0",
+    "method": "cmdb.category.save",
+    "params": {
+        "object": 1122704399,
+        "data": {
+            "title": "Name of the access",
+            "description": "description of the access"
+        },
+        "category": "C__CATG__ACCESS",
+        "apikey": "c1ia5q",
+        "language": "en"
+    },
+    "id": 1
+}
+
+## cmdb.category.recycle
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+  "version": "2.0",
+  "method": "cmdb.category.recycle",
+  "params": {
+    "object": 1122704399,
+    "category": "C__CATG__ACCESS",
+    "entry": 8186,
+    "apikey": "c1ia5q",
+    "language": "en"
+  },
+  "id": 1
+}
+
+## cmdb.category.archive
+
+POST https://demo.i-doit.com/src/jsonrpc.php
+Content-Type: application/json
+
+{
+  "version": "2.0",
+  "method": "cmdb.category.archive",
+  "params": {
+    "object": 1122704399,
+    "category": "C__CATG__ACCESS",
+    "entry": 8187,
+    "apikey": "c1ia5q",
+    "language": "en"
+  },
+  "id": 1
+}

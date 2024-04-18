@@ -3,13 +3,13 @@
 ## idoit.version
 
 POST https://demo.i-doit.com/src/jsonrpc.php
-Content-Type: application/xml
+Content-Type: application/json
 
 {
     "version": "2.0",
     "method": "idoit.login",
     "params": {
-        "apikey": "h3md6u3y",
+        "apikey": "c1ia5q",
         "language": "en"
     },
     "id": 1
@@ -18,14 +18,14 @@ Content-Type: application/xml
 ## idoit.login
 
 POST https://demo.i-doit.com/src/jsonrpc.php
-Content-Type: application/xml
+Content-Type: application/json
 
 
 {
     "version": "2.0",
     "method": "idoit.login",
     "params": {
-        "apikey": "h3md6u3y",
+        "apikey": "c1ia5q",
         "language": "en"
     },
     "id": 1
@@ -34,14 +34,14 @@ Content-Type: application/xml
 ## idoit.logout
 
 POST https://demo.i-doit.com/src/jsonrpc.php
-Content-Type: application/xml
+Content-Type: application/json
 
 
 {
     "version": "2.0",
     "method": "idoit.logout",
     "params": {
-        "apikey": "h3md6u3y",
+        "apikey": "c1ia5q",
         "language": "en"
     },
     "id": 1
